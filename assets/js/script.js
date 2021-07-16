@@ -1,8 +1,7 @@
-var setTime = document.querySelector(".hour");
+//var setTime = document.querySelector(".hour");
 
 // current day is displayed at the top of the calendar
 $ ('#currentDay').text (moment ().format ('dddd MMMM Do YYYY'));
-
 
 // each time block is color-coded to indicate whether it is in the past, present, or future
 function setBgColor () {
@@ -13,7 +12,7 @@ function setBgColor () {
   $ ('.time-block').each (function () {
     var blockTime = parseInt ($ (this).attr ('id'));
 
-    console.log(this); //verify each time-block is applying the added classes
+    // console.log(this); //verify each time-block is applying the added classes
     if (blockTime > hour) {
       $ (this).addClass ('future');
     } else if (blockTime === hour) {
@@ -23,7 +22,6 @@ function setBgColor () {
     }
   });
 }
-
 
 //declare the variable for the save button
 var saveBtn = $ ('.saveBtn');
@@ -38,10 +36,9 @@ saveBtn.on ('click', function () {
   localStorage.setItem (time, task);
 });
 
-
 //  the calculated time blocks and the assciated task are stored
 // WHEN I refresh the page
-// THEN the saved events persist 
+// THEN the saved events persist
 function savedTask () {
   $ ('.hour').each (function () {
     var blockTime = $ (this).text ();
@@ -57,3 +54,4 @@ function savedTask () {
 //call functions
 setBgColor ();
 savedTask ();
+//displayTime(); I tried to dynamically set the time but kept getting error

@@ -47,6 +47,8 @@ textarea {
   color: 000;
 }
 
+/* changed colors I felt green was better for present time and red for future */
+
 .future {
   background-color: #ff6961;
   color: white;
@@ -70,12 +72,13 @@ textarea {
   transition: all 0.3s ease-in-out;
 }
 
-/* custom styles */
+/* custom styles 
+I added highlighting when the textarea is hovered and blue border when active
+*/
 
 .form-control {
   font-size: 1.2rem;
 }
-
 
 .form-control:hover {
   background-color: #fefae0;
